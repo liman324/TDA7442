@@ -118,7 +118,7 @@ void TDA7442::setInput(int in){
 }
 
 void TDA7442::writeWire(char a, char b){
-  Wire.beginTransmission(TDA7449_address);
+  Wire.beginTransmission(TDA7442_address);
   Wire.write (a);
   Wire.write (b);
   Wire.endTransmission();
