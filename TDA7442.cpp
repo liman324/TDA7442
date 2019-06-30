@@ -107,7 +107,7 @@ void TDA7442::setVol_R(int vol_r){
       writeWire(TDA7442_ATT_R, vol_r);
 }
 
-void setInput(int in){
+void TDA7442::setInput(int in){
       switch(in){
          case 0: in = 0b00000000;break;
          case 1: in = 0b00000010;break; 
