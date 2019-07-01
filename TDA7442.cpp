@@ -7,7 +7,7 @@ TDA7442::TDA7442(){
 }
 
 void TDA7442::setInput_att(int in_att){
-          in_att = 0b01000000 + in_att;
+          in_att = 0b01000000 + abs(in_att);
       writeWire(TDA7442_INPUT_ATT, in_att);
 }
 
@@ -100,19 +100,19 @@ void TDA7442::setTreble(int treb){
 }
 
 void TDA7442::setVol_L(int vol_l){     
-      writeWire(TDA7442_ATT_L, vol_l);
+      writeWire(TDA7442_ATT_L, abs(vol_l));
 }
 
 void TDA7442::setVol_R(int vol_r){     
-      writeWire(TDA7442_ATT_R, vol_r);
+      writeWire(TDA7442_ATT_R, abs(vol_r));
 }
 
 void TDA7442::setInput(int in){
       switch(in){
-         case 0: in = 0b00000000;break;
-         case 1: in = 0b00000010;break; 
-         case 2: in = 0b00000100;break;
-         case 3: in = 0b00000110;break;
+         case 2: in = 0b00000000;break;
+         case 3: in = 0b00000010;break; 
+         case 4: in = 0b00000100;break;
+         case 1: in = 0b00000110;break;
 }
      writeWire(TDA7442_INPUT_MULT, in);
 }
