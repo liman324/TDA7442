@@ -31,7 +31,7 @@ class TDA7442
         void setTreble(int treb); // int -7...7 = -14...+14 dB step 2 dB
         void setVol_L(int vol_l); // int -79...0 = -79...0 dB
         void setVol_R(int vol_r); // int -79...0 = -79...0 dB
-        void setInput(int in);  // int 0...3 
+        void setInput(int in);  // int 1...4 
 
   private:
 	void writeWire(char a, char b);
